@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/scenes/hub.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Pixeled.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="HUB" type="Node2D"]
+script = ExtResource( 1 )
+SELECT_COLOR = Color( 0.905882, 0.945098, 0.227451, 1 )
+UNSELECT_COLOR = Color( 0.956863, 0.956863, 0.956863, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 576.0
+margin_bottom = 320.0
+color = Color( 0.168627, 0, 0, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 150.0
+margin_right = 576.0
+margin_bottom = 320.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 426.0
+margin_bottom = 320.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_right = 159.0
+margin_bottom = 320.0
+alignment = 1
+
+[node name="Start" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 87.0
+margin_right = 159.0
+margin_bottom = 133.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.94902, 0.94902, 0.94902, 1 )
+text = "Start Game"
+uppercase = true
+
+[node name="Controls" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 137.0
+margin_right = 159.0
+margin_bottom = 183.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.94902, 0.94902, 0.94902, 1 )
+text = "Controls"
+uppercase = true
+
+[node name="Exit" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 187.0
+margin_right = 159.0
+margin_bottom = 233.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.94902, 0.94902, 0.94902, 1 )
+text = "Exit"
+valign = 1
+uppercase = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 163.0
+margin_right = 163.0
+margin_bottom = 320.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+color = Color( 0.113725, 0.756863, 0.121569, 1 )
+

@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/scenes/controls.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Pixeled.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/fonts/pixelart.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[node name="Controls" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 576.0
+margin_bottom = 320.0
+color = Color( 0.145098, 0.0156863, 0.0156863, 1 )
+
+[node name="top" type="MarginContainer" parent="ColorRect"]
+anchor_right = 1.0
+margin_top = 32.0
+
+[node name="Label" type="Label" parent="ColorRect/top"]
+margin_right = 576.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "CONTROLS"
+align = 1
+valign = 1
+
+[node name="Body" type="MarginContainer" parent="ColorRect"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 64.0
+margin_top = -64.0
+margin_right = -64.0
+
+[node name="Label" type="Label" parent="ColorRect/Body"]
+margin_right = 448.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 2 )
+text = "Simple! one level with 8 iterations each one has a diferent control mechanism.
+
+On the top left corner you can see a hint for the current control mechanism."
+autowrap = true
+
+[node name="bottom" type="MarginContainer" parent="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -30.0
+margin_bottom = -16.0
+
+[node name="Label" type="Label" parent="ColorRect/bottom"]
+margin_right = 576.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "Press SPACE to go back...."
+align = 1
+valign = 1
+autowrap = true
